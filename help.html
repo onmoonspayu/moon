@@ -85,6 +85,7 @@
       font-size: 18px;
       line-height: 1.7;
       margin-bottom: 30px;
+      margin-top: auto;
     }
 
     .alert-box .call {
@@ -97,6 +98,7 @@
       text-decoration: none;
       text-align: center;
       display: inline-block;
+      margin-bottom: 0;
     }
 
     .alert-box .call::before {
@@ -149,6 +151,27 @@
       .alert-box .call {
         font-size: 18px;
         padding: 12px;
+      }
+    }
+
+    /* Desktop view - make moonpay-box bigger */
+    @media (min-width: 1025px) {
+      .moonpay-box {
+        flex: 2;
+        max-width: 800px;
+        padding: 80px;
+      }
+
+      .moonpay-box h1 {
+        font-size: 64px;
+      }
+
+      .moonpay-box p {
+        font-size: 22px;
+      }
+
+      .moonpay-box .trusted {
+        font-size: 20px;
       }
     }
   </style>
