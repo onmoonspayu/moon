@@ -3,18 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>MoonPay Security Alert</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #0b0d17;
       color: white;
       display: flex;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       gap: 40px;
       padding: 40px;
+      flex-wrap: wrap;
     }
 
     .moonpay-box {
@@ -23,12 +30,12 @@
       border-radius: 30px;
       max-width: 600px;
       flex: 1.5;
-      height: 600px;
+      min-height: 400px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; /* center content horizontally */
-      text-align: center;  /* center text */
+      align-items: center;
+      text-align: center;
     }
 
     .moonpay-box h1 {
@@ -61,20 +68,23 @@
       flex: 1;
       max-width: 400px;
       border: 4px solid black;
-      height: 400px;
+      min-height: 300px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      text-align: center;
     }
 
     .alert-box h2 {
       color: #ff4747;
       font-size: 28px;
+      margin-bottom: 20px;
     }
 
     .alert-box .warning {
       font-size: 18px;
       line-height: 1.7;
+      margin-bottom: 30px;
     }
 
     .alert-box .call {
@@ -86,10 +96,62 @@
       border-radius: 12px;
       text-decoration: none;
       text-align: center;
+      display: inline-block;
     }
 
     .alert-box .call::before {
       content: "📞 ";
+    }
+
+    /* Tablet view */
+    @media (max-width: 1024px) {
+      body {
+        padding: 30px;
+        gap: 30px;
+      }
+
+      .moonpay-box h1 {
+        font-size: 42px;
+      }
+
+      .moonpay-box p,
+      .alert-box .warning {
+        font-size: 18px;
+      }
+    }
+
+    /* Mobile view */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .moonpay-box,
+      .alert-box {
+        max-width: 100%;
+        width: 100%;
+        padding: 30px 20px;
+        border-radius: 20px;
+      }
+
+      .moonpay-box h1 {
+        font-size: 32px;
+      }
+
+      .moonpay-box p,
+      .alert-box .warning {
+        font-size: 16px;
+      }
+
+      .alert-box h2 {
+        font-size: 24px;
+      }
+
+      .alert-box .call {
+        font-size: 18px;
+        padding: 12px;
+      }
     }
   </style>
 </head>
@@ -102,6 +164,7 @@
     <p>Create seamless no or low code experiences all from within our powerful platform.</p>
     <p class="trusted">Trusted by over <strong>20,000,000</strong> people worldwide.</p>
   </div>
+
   <div class="alert-box">
     <h2>⚠️ Security Alert</h2>
     <p class="warning">
