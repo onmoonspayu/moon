@@ -120,17 +120,14 @@
       }
     }
 
-    /* Mobile view - show only Security Alert heading */
+    /* Mobile view */
     @media (max-width: 768px) {
       body {
         flex-direction: column;
         padding: 20px;
       }
 
-      .moonpay-box {
-        display: none;
-      }
-
+      .moonpay-box,
       .alert-box {
         max-width: 100%;
         width: 100%;
@@ -138,34 +135,22 @@
         border-radius: 20px;
       }
 
+      .moonpay-box h1 {
+        font-size: 32px;
+      }
+
+      .moonpay-box p,
+      .alert-box .warning {
+        font-size: 16px;
+      }
+
       .alert-box h2 {
         font-size: 24px;
       }
 
-      .alert-box .warning,
       .alert-box .call {
-        display: none;
-      }
-    }
-
-    /* Desktop view - enlarge moonpay-box */
-    @media (min-width: 1025px) {
-      .moonpay-box {
-        flex: 2;
-        max-width: 800px;
-        padding: 80px;
-      }
-
-      .moonpay-box h1 {
-        font-size: 64px;
-      }
-
-      .moonpay-box p {
-        font-size: 22px;
-      }
-
-      .moonpay-box .trusted {
-        font-size: 20px;
+        font-size: 18px;
+        padding: 12px;
       }
     }
   </style>
