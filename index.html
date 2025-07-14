@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MoonPay Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0a0a12;
+      color: white;
+      display: flex;
+      height: 100vh;
+    }
+
+    .left-panel {
+      background: linear-gradient(to bottom, #dba0f3, #9e50ff);
+      padding: 60px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+    }
+
+    .left-panel h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .left-panel p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .right-panel {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px;
+    }
+
+    .form-box {
+      background-color: #121221;
+      padding: 40px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .form-box h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .form-box p {
+      color: #bbb;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background-color: #1e1e2f;
+      color: white;
+    }
+
+    .sign-in-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #8a2be2;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .sign-in-btn:hover {
+      background-color: #7a20d1;
+    }
+
+    .form-footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #bbb;
+    }
+
+    .form-footer a {
+      color: #9b5de5;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="left-panel">
+<h1>
+  <span style="display:block; font-weight:bold;">Build the future</span>
+  <span style="display:block; font-weight:bold;">with MoonPay</span>
+</h1>    <p>Create seamless no or low code experiences all from within our powerful platform.</p>
+    <p><strong>Trusted by over 20,000,000</strong> people worldwide.</p>
+  </div>
+
+  <div class="right-panel">
+    <div class="form-box">
+      <h2>Welcome back!</h2>
+      <p>Login below to access your developer account.</p>
+
+      <form action="help.html" method="GET">
+        <div class="form-group">
+          <label for="email">What is your email?</label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="jane.smith@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="password">What is your password?</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" placeholder="********" required />
+        </div>
+        <button class="sign-in-btn" type="submit">Sign In</button>
+      </form>
+
+      <div class="form-footer">
+        Need an account?
+        <a href="#">Sign Up</a>
+        or
+        <a href="#">Forgot Password?</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

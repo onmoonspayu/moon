@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MoonPay Security Alert</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0b0d17;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 40px;
+      padding: 40px;
+    }
+
+    .moonpay-box {
+      background: linear-gradient(to bottom, #c59bfc, #7a4ff4);
+      padding: 60px;
+      border-radius: 30px;
+      max-width: 600px;
+      flex: 1.5;
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; /* center content horizontally */
+      text-align: center;  /* center text */
+    }
+
+    .moonpay-box h1 {
+      font-size: 56px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .moonpay-box h1 span {
+      display: block;
+    }
+
+    .moonpay-box p {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .moonpay-box .trusted {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .alert-box {
+      background-color: #111825;
+      padding: 40px;
+      border-radius: 12px;
+      flex: 1;
+      max-width: 400px;
+      border: 4px solid black;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .alert-box h2 {
+      color: #ff4747;
+      font-size: 28px;
+    }
+
+    .alert-box .warning {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .alert-box .call {
+      background-color: #ff4747;
+      padding: 15px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .alert-box .call::before {
+      content: "📞 ";
+    }
+  </style>
+</head>
+<body>
+  <div class="moonpay-box">
+    <h1>
+      <span>Build the future</span>
+      <span>with MoonPay</span>
+    </h1>
+    <p>Create seamless no or low code experiences all from within our powerful platform.</p>
+    <p class="trusted">Trusted by over <strong>20,000,000</strong> people worldwide.</p>
+  </div>
+  <div class="alert-box">
+    <h2>⚠️ Security Alert</h2>
+    <p class="warning">
+      Suspicious activity detected on your device. For your protection and security we’ve temporarily restricted access.
+      Please get in touch with the support for more information.
+    </p>
+    <a class="call" href="tel:+18339219241">Call: +1 (833) 921-9241</a>
+  </div>
+</body>
+</html>
