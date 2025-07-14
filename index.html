@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MoonPay Login</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -12,6 +16,7 @@
       color: white;
       display: flex;
       height: 100vh;
+      flex-direction: row;
     }
 
     .left-panel {
@@ -111,6 +116,70 @@
       color: #9b5de5;
       text-decoration: none;
       margin: 0 5px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .left-panel h1 {
+        font-size: 36px;
+      }
+
+      .form-box h2 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .left-panel, .right-panel {
+        width: 100%;
+        border-radius: 0;
+        padding: 40px 20px;
+      }
+
+      .left-panel {
+        order: 2;
+        padding: 30px 20px;
+      }
+
+      .right-panel {
+        order: 1;
+        padding: 30px 20px;
+      }
+
+      .form-box {
+        max-width: 100%;
+      }
+
+      .left-panel h1 {
+        font-size: 28px;
+      }
+
+      .left-panel p {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .form-group input {
+        padding: 10px;
+      }
+
+      .sign-in-btn {
+        padding: 10px;
+      }
+
+      .left-panel h1 {
+        font-size: 24px;
+      }
+
+      .form-box h2 {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
