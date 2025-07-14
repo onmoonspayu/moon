@@ -14,164 +14,52 @@
       font-family: Arial, sans-serif;
       background-color: #0b0d17;
       color: white;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      gap: 40px;
-      padding: 40px;
-      flex-wrap: wrap;
     }
 
-    .moonpay-box {
-      background: linear-gradient(to bottom, #c59bfc, #7a4ff4);
-      padding: 60px;
-      border-radius: 30px;
-      max-width: 600px;
-      flex: 1.5;
-      min-height: 400px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    .header {
+      padding: 20px;
+      background-color: #1a1c2c;
       text-align: center;
     }
 
-    .moonpay-box h1 {
-      font-size: 56px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      line-height: 1.2;
-    }
-
-    .moonpay-box h1 span {
-      display: block;
-    }
-
-    .moonpay-box p {
-      font-size: 20px;
-      line-height: 1.6;
-      margin-top: 10px;
-    }
-
-    .moonpay-box .trusted {
-      margin-top: 20px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .alert-box {
-      background-color: #111825;
-      padding: 40px;
-      border-radius: 12px;
-      flex: 1;
-      max-width: 400px;
-      border: 4px solid black;
-      min-height: 300px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    .intro {
+      padding: 30px 20px;
+      background-color: #121420;
       text-align: center;
     }
 
-    .alert-box h2 {
-      color: #ff4747;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    .alert-box .warning {
-      font-size: 18px;
-      line-height: 1.7;
-      margin-bottom: 30px;
-    }
-
-    .alert-box .call {
-      background-color: #ff4747;
-      padding: 15px;
-      color: white;
-      font-weight: bold;
-      font-size: 20px;
-      border-radius: 12px;
-      text-decoration: none;
+    .message {
+      padding: 40px 20px;
+      font-size: 1.4em;
       text-align: center;
-      display: inline-block;
+      background-color: #1c1f2e;
+      border-top: 2px solid #ff4c4c;
     }
 
-    .alert-box .call::before {
-      content: "📞 ";
-    }
-
-    /* Tablet view */
-    @media (max-width: 1024px) {
-      body {
-        padding: 30px;
-        gap: 30px;
-      }
-
-      .moonpay-box h1 {
-        font-size: 42px;
-      }
-
-      .moonpay-box p,
-      .alert-box .warning {
-        font-size: 18px;
-      }
-    }
-
-    /* Mobile view */
+    /* Hide intro section on mobile */
     @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-        padding: 20px;
-      }
-
-      .moonpay-box,
-      .alert-box {
-        max-width: 100%;
-        width: 100%;
-        padding: 30px 20px;
-        border-radius: 20px;
-      }
-
-      .moonpay-box h1 {
-        font-size: 32px;
-      }
-
-      .moonpay-box p,
-      .alert-box .warning {
-        font-size: 16px;
-      }
-
-      .alert-box h2 {
-        font-size: 24px;
-      }
-
-      .alert-box .call {
-        font-size: 18px;
-        padding: 12px;
+      .intro {
+        display: none;
       }
     }
   </style>
 </head>
 <body>
-  <div class="moonpay-box">
-    <h1>
-      <span>Build the future</span>
-      <span>with MoonPay</span>
-    </h1>
-    <p>Create seamless no or low code experiences all from within our powerful platform.</p>
-    <p class="trusted">Trusted by over <strong>20,000,000</strong> people worldwide.</p>
+
+  <div class="header">
+    <h1>MoonPay</h1>
   </div>
 
-  <div class="alert-box">
-    <h2>⚠️ Security Alert</h2>
-    <p class="warning">
-      Suspicious activity detected on your device. For your protection and security we’ve temporarily restricted access.
-      Please get in touch with the support for more information.
-    </p>
-    <a class="call" href="tel:+18339219241">Call: +1 (833) 921-9241</a>
+  <div class="intro">
+    <h2>Build the future<br>with MoonPay</h2>
+    <p>Create seamless no or low code experiences all from within our powerful platform.</p>
+    <p><strong>Trusted by over 20,000,000 people worldwide.</strong></p>
   </div>
+
+  <div class="message">
+    <h2>Security Alert</h2>
+    <p>We've detected unusual activity on your account. Please review your recent transactions immediately.</p>
+  </div>
+
 </body>
 </html>
