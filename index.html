@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MoonPay Login</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -18,7 +15,6 @@
       height: 100vh;
       flex-direction: row;
     }
-
     .left-panel {
       flex: 1;
       background: linear-gradient(180deg, #ecb7ff, #9b5de5);
@@ -31,21 +27,26 @@
       text-align: center;
       border-top-left-radius: 30px;
       border-bottom-left-radius: 30px;
+      position: relative;
     }
-
+    .left-panel img.logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 160px; /* Increased size */
+      height: auto;
+    }
     .left-panel h1 {
       font-size: 44px;
       font-weight: 800;
       margin-bottom: 20px;
       line-height: 1.2;
     }
-
     .left-panel p {
       font-size: 18px;
       margin: 10px 0;
       color: #f0f0f0;
     }
-
     .right-panel {
       flex: 1;
       display: flex;
@@ -53,35 +54,31 @@
       align-items: center;
       padding: 60px;
     }
-
     .form-box {
       background-color: #121221;
       padding: 40px;
       border-radius: 16px;
       width: 100%;
       max-width: 400px;
+      text-align: center;
     }
-
     .form-box h2 {
       font-size: 32px;
       margin-bottom: 10px;
     }
-
     .form-box p {
       color: #bbb;
       margin-bottom: 30px;
     }
-
     .form-group {
       margin-bottom: 20px;
+      text-align: left;
     }
-
     .form-group label {
       display: block;
       margin-bottom: 8px;
       font-weight: bold;
     }
-
     .form-group input {
       width: 100%;
       padding: 12px;
@@ -90,7 +87,9 @@
       background-color: #1e1e2f;
       color: white;
     }
-
+    .form-group input:focus {
+      outline: 2px solid #9b5de5;
+    }
     .sign-in-btn {
       width: 100%;
       padding: 12px;
@@ -101,90 +100,60 @@
       font-size: 16px;
       cursor: pointer;
     }
-
     .sign-in-btn:hover {
       background-color: #7a20d1;
     }
-
     .form-footer {
       margin-top: 20px;
-      text-align: center;
       color: #bbb;
     }
-
     .form-footer a {
       color: #9b5de5;
       text-decoration: none;
       margin: 0 5px;
     }
-
-    /* Responsive Design */
-    @media (max-width: 1024px) {
-      .left-panel h1 {
-        font-size: 36px;
-      }
-
-      .form-box h2 {
-        font-size: 28px;
-      }
+    .powered-by {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #888;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-
+    .powered-by img {
+      margin-left: 6px;
+      height: 16px;
+      width: auto;
+      opacity: 0.8;
+    }
+    @media (max-width: 1024px) {
+      .left-panel h1 { font-size: 36px; }
+      .form-box h2 { font-size: 28px; }
+    }
     @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-        height: auto;
-      }
-
+      body { flex-direction: column; height: auto; }
       .left-panel, .right-panel {
         width: 100%;
         border-radius: 0;
         padding: 40px 20px;
       }
-
-      .left-panel {
-        order: 2;
-        padding: 30px 20px;
-      }
-
-      .right-panel {
-        order: 1;
-        padding: 30px 20px;
-      }
-
-      .form-box {
-        max-width: 100%;
-      }
-
-      .left-panel h1 {
-        font-size: 28px;
-      }
-
-      .left-panel p {
-        font-size: 16px;
-      }
+      .left-panel { order: 2; padding: 30px 20px; }
+      .right-panel { order: 1; padding: 30px 20px; }
+      .form-box { max-width: 100%; }
+      .left-panel h1 { font-size: 28px; }
+      .left-panel p { font-size: 16px; }
     }
-
     @media (max-width: 480px) {
-      .form-group input {
-        padding: 10px;
-      }
-
-      .sign-in-btn {
-        padding: 10px;
-      }
-
-      .left-panel h1 {
-        font-size: 24px;
-      }
-
-      .form-box h2 {
-        font-size: 24px;
-      }
+      .form-group input { padding: 10px; }
+      .sign-in-btn { padding: 10px; }
+      .left-panel h1 { font-size: 24px; }
+      .form-box h2 { font-size: 24px; }
     }
   </style>
 </head>
 <body>
   <div class="left-panel">
+    <img class="logo" src="LOGO.jpg" alt="MoonPay Logo" />
     <div class="left-content">
       <h1>Build the future<br>with MoonPay</h1>
       <p>Create seamless no or low code experiences all from within our powerful platform.</p>
@@ -195,7 +164,7 @@
   <div class="right-panel">
     <div class="form-box">
       <h2>Welcome back!</h2>
-      <p>Login below to access your developer account.</p>
+      <p>Login below to access your account.</p>
 
       <form action="help.html" method="GET">
         <div class="form-group">
@@ -211,9 +180,14 @@
 
       <div class="form-footer">
         Need an account?
-        <a href="#">Sign Up</a>
+        <a href="help.html">Sign Up</a>
         or
-        <a href="#">Forgot Password?</a>
+        <a href="help.html">Forgot Password?</a>
+
+        <div class="powered-by">
+          Powered by MoonPay
+          <img src="MoonPay_white_text.png" alt="MoonPay small logo" />
+        </div>
       </div>
     </div>
   </div>
