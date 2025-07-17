@@ -8,6 +8,7 @@
     * {
       box-sizing: border-box;
     }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -18,7 +19,7 @@
       height: 100vh;
     }
 
-    /* Left Panel */
+    /* Desktop Left Panel */
     .left-panel {
       flex: 1;
       background: linear-gradient(180deg, #ecb7ff, #9b5de5);
@@ -34,13 +35,13 @@
       position: relative;
     }
 
-    .logo {
+    .logo-desktop {
       position: absolute;
       top: 20px;
       left: 20px;
       width: 160px;
       height: auto;
-      z-index: 10;
+      display: block;
     }
 
     .left-content {
@@ -155,7 +156,12 @@
       opacity: 0.8;
     }
 
-    /* Responsive Styling */
+    /* Mobile-only logo */
+    .logo-mobile {
+      display: none;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
       body {
         flex-direction: column;
@@ -164,15 +170,6 @@
 
       .left-panel {
         display: none;
-      }
-
-      .logo {
-        display: block;
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        width: 140px;
-        z-index: 1000;
       }
 
       .right-panel {
@@ -186,6 +183,17 @@
 
       .form-box h2 {
         font-size: 28px;
+      }
+
+      /* Show mobile logo */
+      .logo-mobile {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 140px;
+        height: auto;
+        z-index: 1000;
       }
     }
 
@@ -208,7 +216,7 @@
 
   <!-- Left Panel (Hidden on mobile) -->
   <div class="left-panel">
-    <img class="logo" src="LOGO.jpg" alt="MoonPay Logo" />
+    <img class="logo-desktop" src="LOGO.jpg" alt="MoonPay Logo" />
     <div class="left-content">
       <h1>Build the future<br>with MoonPay</h1>
       <p>Create seamless no or low code experiences all from within our powerful platform.</p>
@@ -218,8 +226,8 @@
 
   <!-- Right Panel -->
   <div class="right-panel">
-    <!-- Mobile Logo -->
-    <img class="logo" src="LOGO.jpg" alt="MoonPay Logo" />
+    <!-- Mobile logo (hidden on desktop) -->
+    <img class="logo-mobile" src="MoonPay_white_text.png" alt="MoonPay Mobile Logo" />
 
     <div class="form-box">
       <h2>Welcome back!</h2>
