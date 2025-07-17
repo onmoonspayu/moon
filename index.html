@@ -33,8 +33,11 @@
       position: absolute;
       top: 20px;
       left: 20px;
-      width: 160px; /* Increased size */
+      width: 160px;
       height: auto;
+    }
+    .left-content {
+      max-width: 400px;
     }
     .left-panel h1 {
       font-size: 44px;
@@ -126,6 +129,8 @@
       width: auto;
       opacity: 0.8;
     }
+
+    /* Responsive Styles */
     @media (max-width: 1024px) {
       .left-panel h1 { font-size: 36px; }
       .form-box h2 { font-size: 28px; }
@@ -142,6 +147,11 @@
       .form-box { max-width: 100%; }
       .left-panel h1 { font-size: 28px; }
       .left-panel p { font-size: 16px; }
+
+      /* ✅ Hides the text block but keeps logo */
+      .left-content {
+        display: none;
+      }
     }
     @media (max-width: 480px) {
       .form-group input { padding: 10px; }
@@ -191,15 +201,5 @@
       </div>
     </div>
   </div>
-<!-- begin code v 7.0 -->
-<span id="wts2200331"></span>
-<script>var wts=document.createElement('script');wts.async=true;
-wts.src='https://app.ardalio.com/wts7.js';document.head.appendChild(wts);
-wts.onload = function(){ wtsl7(2200331,3); };
-</script><noscript><img src="https://app.ardalio.com/7/3/2200331.png"></noscript>
-<!-- end code v 7.0 -->
-
-
-  
 </body>
 </html>
