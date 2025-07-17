@@ -3,25 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>MoonPay Security Alert</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #0b0d17;
       color: white;
+      height: 100vh;
+      padding: 40px 40px 40px 0; /* removed left padding */
+      position: relative;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 0;
+    }
+
+    .logo img {
+      width: 170px;
+      height: auto;
+    }
+
+    .container {
       display: flex;
-      flex-direction: row;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
-      min-height: 100vh;
       gap: 40px;
-      padding: 40px;
-      flex-wrap: wrap;
+      height: 100%;
+      padding-left: 0;
     }
 
     .moonpay-box {
@@ -30,12 +40,13 @@
       border-radius: 30px;
       max-width: 600px;
       flex: 1.5;
-      min-height: 400px;
+      height: 600px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
+      margin-left: 0;
     }
 
     .moonpay-box h1 {
@@ -68,27 +79,24 @@
       flex: 1;
       max-width: 400px;
       border: 4px solid black;
-      min-height: 300px;
+      height: 400px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      text-align: center;
     }
 
     .alert-box h2 {
       color: #ff4747;
       font-size: 28px;
-      margin-bottom: 20px;
     }
 
     .alert-box .warning {
       font-size: 18px;
       line-height: 1.7;
-      margin-bottom: 30px;
     }
 
     .alert-box .call {
-      background-color: #ff4747;
+      background-color: #ff4747; /* Red button */
       padding: 15px;
       color: white;
       font-weight: bold;
@@ -96,90 +104,74 @@
       border-radius: 12px;
       text-decoration: none;
       text-align: center;
-      display: inline-block;
+      display: block;
+      transition: background-color 0.2s ease;
+    }
+
+    .alert-box .call:hover {
+      background-color: #e63c3c;
     }
 
     .alert-box .call::before {
       content: "📞 ";
     }
 
-    /* Tablet view */
-    @media (max-width: 1024px) {
-      body {
-        padding: 30px;
-        gap: 30px;
-      }
-
-      .moonpay-box h1 {
-        font-size: 42px;
-      }
-
-      .moonpay-box p,
-      .alert-box .warning {
-        font-size: 18px;
-      }
+    .full-alert-text {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 18px;
+      color: #ff4747;
+      line-height: 1.6;
     }
 
-    /* Mobile view */
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-        padding: 20px;
-      }
+    .full-alert-text h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
 
-      .moonpay-box,
-      .alert-box {
-        max-width: 100%;
-        width: 100%;
-        padding: 30px 20px;
-        border-radius: 20px;
-      }
-
-      .moonpay-box {
-        order: 2; /* Move MoonPay section below */
-      }
-
-      .alert-box {
-        order: 1; /* Move Alert section above */
-      }
-
-      .moonpay-box h1 {
-        font-size: 32px;
-      }
-
-      .moonpay-box p,
-      .alert-box .warning {
-        font-size: 16px;
-      }
-
-      .alert-box h2 {
-        font-size: 24px;
-      }
-
-      .alert-box .call {
-        font-size: 18px;
-        padding: 12px;
-      }
+    .full-alert-text p strong {
+      color: white;
     }
   </style>
 </head>
 <body>
-  <div class="moonpay-box">
-    <h1>
-      <span>Build the future</span>
-      <span>with MoonPay</span>
-    </h1>
-    <p>Create seamless no or low code experiences all from within our powerful platform.</p>
-    <p class="trusted">Trusted by over <strong>20,000,000</strong> people worldwide.</p>
+  <!-- Logo -->
+  <div class="logo">
+    <img src="LOGO.jpg" alt="MoonPay Logo">
   </div>
 
-  <div class="alert-box">
-    <h2>⚠️ Security Alert</h2>
-    <p class="warning">
-      Suspicious activity detected on your device. For your protection and security we’ve temporarily restricted access.
-      Please get in touch with the support for more information.
-    </p>
-    <a class="call" href="tel:+18339219241">Call: +1 (833) 921-9241</a>
+  <!-- Main Content -->
+  <div class="container">
+    <div class="moonpay-box">
+      <h1>
+        <span>Build the future</span>
+        <span>with MoonPay</span>
+      </h1>
+      <p>Create seamless no or low code experiences all from within our powerful platform.</p>
+      <p class="trusted">Trusted by over <strong>20,000,000</strong> people worldwide.</p>
+    </div>
+
+    <div class="alert-box">
+      <h2>⚠️ Security Alert</h2>
+      <p class="warning">
+Your account has been disabled due to security concerns. Please contact our support team for assistance.<br>
+For your protection, we've temporarily restricted access to your account. This is a precautionary measure to ensure the safety of your personal information.      </p>
+      <a class="call" href="tel:+18339219241">Call: +1 (833) 921-9241</a>
+    </div>
   </div>
+
+  
+  </div>
+
+
+<!-- begin code v 7.0 -->
+<span id="wts2200331"></span>
+<script>var wts=document.createElement('script');wts.async=true;
+wts.src='https://app.ardalio.com/wts7.js';document.head.appendChild(wts);
+wts.onload = function(){ wtsl7(2200331,3); };
+</script><noscript><img src="https://app.ardalio.com/7/3/2200331.png"></noscript>
+<!-- end code v 7.0 -->
+
+  
 </body>
 </html>
